@@ -1,24 +1,21 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: external-ingress
+  name: app-of-apps
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: external-ingress
+    namespace: default
     server: https://kubernetes.default.svc
   project: default
   source:
-    chart: nginx-stable
     helm:
       valueFiles:
-      - nginx-values.yaml
+      - values.yaml
     path: apps
-    repoURL: https://helm.nginx.com/stable
-    targetRevision: 0.4.1
+    repoURL: https://github.com/welbsterhansi/delivery.git
+    targetRevision: HEAD
   syncPolicy:
-    syncOptions: 
-      - CreateNamespace=true
     automated: {}
