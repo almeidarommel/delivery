@@ -11,13 +11,13 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    chart: nginx-stable
+    chart: ingress-nginx
     helm:
       valueFiles:
       - nginx-values.yaml
     path: apps
-    repoURL: https://helm.nginx.com/stable
-    targetRevision: 0.14.1
+    repoURL: https://kubernetes.github.io/ingress-nginx
+    targetRevision: 4.0.13
   syncPolicy:
     syncOptions: 
       - CreateNamespace=true
