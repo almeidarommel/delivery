@@ -34,7 +34,7 @@ controller:
     internal:
       enabled: true
       annotations:
-        external-dns.alpha.kubernetes.io.hostname: teste.com.br
+        external-dns.alpha.kubernetes.io.hostname: argocd.dev.provu.com.br
         service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn2323
         service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags: "Environment=eks,Projeto=provu-devops"
         service.beta.kubernetes.io/aws-load-balancer-backend-protocol: "http"
