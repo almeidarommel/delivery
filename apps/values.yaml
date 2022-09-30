@@ -58,7 +58,9 @@ controller:
       memory: 150Mi
 
 rbac:
-  create: false
+  create: true
+  name: nginx-ingress-public
 
 serviceAccount:
-  create: false
+  create: true
+  name: nginx-ingress-public
