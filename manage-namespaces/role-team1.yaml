@@ -9,6 +9,7 @@ rules:
   - apps
   - batch
   - extensions
+  - deployments
   resources:
   - pods
   - pods/attach
